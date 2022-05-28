@@ -1,0 +1,7 @@
+- "left reads":
+  - "/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R1.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R2.fastq.gz"
+  "type": "paired-end"

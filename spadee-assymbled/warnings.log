@@ -1,0 +1,7 @@
+
+=== Error correction and assembling warnings:
+ * 0:08:48.069    40M / 1552M WARN    General                 (kmer_coverage_model.cpp   : 218)   Too many erroneous kmers, the estimates might be unreliable
+ * 0:08:03.386    79M / 2778M WARN    General                 (pair_info_count.cpp       : 358)   Unable to estimate insert size for paired library #0
+ * 0:08:03.386    79M / 2778M WARN    General                 (pair_info_count.cpp       : 364)   None of paired reads aligned properly. Please, check orientation of your read pairs.
+ * 0:08:03.386    79M / 2778M WARN    General                 (repeat_resolving.cpp      :  81)   Insert size was not estimated for any of the paired libraries, repeat resolution module will not run.
+======= Warnings saved to /home/ramomar/projects/assignment-2/spadee-assymbled/warnings.log

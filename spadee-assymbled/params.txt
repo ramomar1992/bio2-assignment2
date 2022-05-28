@@ -1,0 +1,32 @@
+ Command line: /home/ramomar/miniconda3/bin/spades.py	-1	/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R1.fastq.gz	-2	/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R2.fastq.gz	--isolate	-o	/home/ramomar/projects/assignment-2/spadee-assymbled	
+
+System information:
+  SPAdes version: 3.15.4
+  Python version: 3.9.0
+  OS: Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31
+
+Output dir: /home/ramomar/projects/assignment-2/spadee-assymbled
+Mode: ONLY assembling (without read error correction)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Isolate mode
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R1.fastq.gz']
+      right reads: ['/home/ramomar/projects/assignment-2/BioII_Assignment2/P7741_R2.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/ramomar/projects/assignment-2/spadee-assymbled/tmp
+  Threads: 16
+  Memory limit (in Gb): 6
+

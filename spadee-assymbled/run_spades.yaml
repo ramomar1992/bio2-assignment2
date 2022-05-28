@@ -1,0 +1,127 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K21/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K21/configs/isolate_mode.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K33/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K33/configs/isolate_mode.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K55/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K55/configs/isolate_mode.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k55
+- STAGE: K77
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K77/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K77/configs/isolate_mode.info
+  config_dir: K77
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k77
+- STAGE: K99
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K99/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K99/configs/isolate_mode.info
+  config_dir: K99
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k99
+- STAGE: K127
+  args:
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/configs/config.info
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/configs/isolate_mode.info
+  config_dir: K127
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/spades-core
+  short_name: k127
+- STAGE: Copy files
+  args:
+  - /home/ramomar/miniconda3/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/before_rr.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/before_rr.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/assembly_graph_after_simplification.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/assembly_graph_after_simplification.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/final_contigs.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/contigs.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/first_pe_contigs.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/first_pe_contigs.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/strain_graph.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/strain_graph.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/scaffolds.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/scaffolds.fasta
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/scaffolds.paths
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/scaffolds.paths
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/assembly_graph_with_scaffolds.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/assembly_graph_with_scaffolds.gfa
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/assembly_graph.fastg
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/assembly_graph.fastg
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/K127/final_contigs.paths
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_59tgisam
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/ramomar/miniconda3/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/scaffolds.fasta
+  - --misc_dir
+  - /home/ramomar/projects/assignment-2/spadee-assymbled/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /home/ramomar/miniconda3/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate
